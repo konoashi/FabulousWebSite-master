@@ -1,0 +1,3287 @@
+<html class="  webp webp-alpha webp-animation webp-lossless" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link rel="icon" href="../icone.png" type="image/x-icon">
+        <title>KonoCalculator - Dragon loots </title>
+        <meta property="twitter:description" content="thirtyvirus has been playing SkyBlock for 9 months and is fighting with a Spicy 51M Midas' Sword. Click to view more stats!">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta property="og:site_name" content="sky.lea.moe">
+        <meta property="og:type" content="object">
+    
+        <link rel="sitemap" href="../sitemap.xml">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../resources/css/index64f7dragon.css?v107">
+        <link rel="stylesheet" href="../resources/css/inventory8e9a.css?v13">
+
+        <script type="text/javascript" src="../resources/js/dragon.js"></script>
+        <script type="text/javascript" src="../resources/js/stats.js"></script>
+        <script type="text/javascript" src="../resources/js/sticky.min.js"></script>
+        <script type="text/javascript" src="../resources/js/anime.min.js"></script>
+        <script type="text/javascript" src="../resources/js/modernizr.js"></script>
+    </head> 
+    
+
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><style type="text/css" id="dark-mode-custom-style"></style></head><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><style type="text/css" id="dark-mode-custom-style"></style>
+<body>
+    <header class="page-stats">
+        
+        <img src="../icone2.png" class="pride-flag">
+        <a href="../index.html" id="site_name">KonoCalculator - Dragon loots</a>
+        
+        
+        
+    </header>
+
+    <div id="wrapper" data-sticky-container="" onclick="suprstats()" >
+            
+        <div id="player_profile"><span class="text-stats-for">Dragon simulator</span></div>
+            
+            
+        <div id="basic_stats">
+            
+
+
+            <input id="goto_target_username" type="button" value="Summon the Dragon" onclick="drag(), compter()" >
+            <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragimg1">
+
+            <div data-stat="kills" class="stat-container stat-kills">
+                <div class="stat-anchor"></div>
+                <div class="stat-header"><span>Stats</span></div>
+                <div class="stat-content">
+                    <p class="stat-raw-values">
+                        <span class="stat-name">Total Cost: </span><span class="stat-value"><span class="stat-value" id="totalcost"></span></span><br>
+                        <span class="stat-name">Total Summoning Eyes Used: </span><span class="stat-value"><span class="stat-value" id="toteye"></span></span></body><br>
+                        <span class="stat-name">Total Dragon Summoned: </span><span class="stat-value"><span class="stat-value" id="totdrag"></span></span>
+                    </p>
+                    <div class="kills-deaths-container">
+                        <div class="narrow-info-container top-kills">
+                            <div class="narrow-info-header">Precedent Summon</div>
+                            <div class="narrow-info-content">
+                                
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="unstable">Cost</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="cost1"></span></div>
+                                    
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="unstable">Eyes Placed</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="eyelast"></span></div>
+                                    
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="wize">Magic Find</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="mf"></div>
+                                    
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="sup">Place</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="place"></span></div>
+
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="unstable">Weigth</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="weigth"></span></div>
+                                    
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            
+                
+
+        
+                <div id="base_stats_container" >
+                
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                
+                   
+
+                </div>
+    
+
+                        
+            </div>
+        
+            <br/>
+            <br/>
+            <br/>
+
+        
+
+            <style>
+                /*the container must be positioned relative:*/
+                .custom-select {
+                  position: relative;
+                  font-family: Montserrat, sans-serif;
+                  font-weight: 600;
+                  height:36px;
+                }
+                
+                .custom-select select {
+                  display: none; /*hide original SEECT element:*/
+                }
+                
+                .select-selected {
+                  background-color: rgba(239, 83, 80, 0.30);
+                  border-radius: 18px;
+                  
+                }
+                
+                /*style the arrow inside the select element:*/
+                .select-selected:after {
+                  position: absolute;
+                  content: "";
+                  top: 14px;
+                  right: 10px;
+                  width: 0;
+                  height: 36px;
+                  border: 6px solid transparent;
+                  border-color: #fff transparent transparent transparent;
+                }
+                
+                /*point the arrow upwards when the select box is open (active):*/
+                .select-selected.select-arrow-active:after {
+                  border-color: transparent transparent #fff transparent;
+                  top: 7px;
+                }
+                
+                /*style the items (options), including the selected item:*/
+                .select-items div,.select-selected {
+                  color: rgba(168, 167, 167, 0.76);
+                  padding: 8px 16px;
+                  border: 1px solid transparent;
+                  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+                  cursor: pointer;
+                  user-select: none;
+                  
+                  
+                }
+                
+                /*style items (options):*/
+                .select-items {
+                  position: absolute;
+                  background-color: rgba(239, 83, 80, 0.30);
+                  top: 100%;
+                  left: 0;
+                  right: 0;
+                  z-index: 99;
+                  border-radius: 18px;
+                }
+                
+                /*hide the items when the select box is closed:*/
+                .select-hide {
+                  display: none;
+                }
+                
+                .select-items div:hover, .same-as-selected {
+                  background-color: rgba(0, 0, 0, 0.1);
+                }
+                </style>
+                </head>     
+                
+                <body>
+                
+                <h2> </h2>
+                
+                <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+                <div id="idlistl" class="custom-select" style="width:360px;left: 50%;margin-left: 400px;top: -245px;" >
+                  <select id="idlist">
+                                    <option value="1">
+                                        1st
+                                    </option>
+                                    <option value="1">
+                                      1st
+                                   </option>
+                                    <option value="2">
+                                        2nd
+                                    </option>
+                                    <option value="3">
+                                        3rd
+                                    </option>
+                                    <option value="4">
+                                        4th
+                                    </option>
+                                    <option value="5">
+                                        5th
+                                    </option>
+                                    <option value="6">
+                                        6th
+                                    </option>
+                                    <option value="7">
+                                        7th
+                                    </option>
+                                    <option value="8">
+                                        8th
+                                    </option>
+                                    <option value="9">
+                                        9th
+                                    </option>
+                                    <option value="10">
+                                        10th
+                                    </option>
+                                    <option value="11">
+                                        11th
+                                    </option>
+                                    <option value="12">
+                                        12th
+                                    </option>
+                                    <option value="13">
+                                        13th
+                                    </option>
+                                    <option value="14">
+                                      14th
+                                    </option>
+                                    <option value="15">
+                                      15th
+                                    </option>
+                                    <option value="16">
+                                      16th
+                                    </option>
+                                    <option value="17">
+                                      17th
+                                    </option>
+                                    <option value="18">
+                                      18th
+                                    </option>
+                                    <option value="19">
+                                      19th
+                                    </option>
+                                    <option value="20">
+                                      20th
+                                    </option>
+                                    <option value="21">
+                                      21th
+                                    </option>
+                                    <option value="22">
+                                      22th
+                                    </option>
+                                    <option value="23">
+                                      23th
+                                    </option>
+                                    <option value="24">
+                                      24th
+                                    </option>
+                                    <option value="25">
+                                      25th
+                                    </option>
+                                    <option value="26">
+                                      26th
+                                    </option>
+                                    <option value="27">
+                                      27th
+                                    </option>
+                                    <option value="28">
+                                      28th
+                                    </option>
+                                    
+                  </select>
+                </div>
+                
+                <script>
+                var x, i, j, l, ll, selElmnt, a, b, c;
+                /*look for any elements with the class "custom-select":*/
+                x = document.getElementsByClassName("custom-select");
+                l = x.length;
+                for (i = 0; i < l; i++) {
+                  selElmnt = x[i].getElementsByTagName("select")[0];
+                  ll = selElmnt.length;
+                  /*for each element, create a new DIV that will act as the selected item:*/
+                  a = document.createElement("DIV");
+                  a.setAttribute("class", "select-selected");
+                  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+                  x[i].appendChild(a);
+                  /*for each element, create a new DIV that will contain the option list:*/
+                  b = document.createElement("DIV");
+                  b.setAttribute("class", "select-items select-hide");
+                  for (j = 1; j < ll; j++) {
+                    /*for each option in the original select element,
+                    create a new DIV that will act as an option item:*/
+                    c = document.createElement("DIV");
+                    c.innerHTML = selElmnt.options[j].innerHTML;
+                    c.addEventListener("click", function(e) {
+                        /*when an item is clicked, update the original select box,
+                        and the selected item:*/
+                        var y, i, k, s, h, sl, yl;
+                        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                        sl = s.length;
+                        h = this.parentNode.previousSibling;
+                        for (i = 0; i < sl; i++) {
+                          if (s.options[i].innerHTML == this.innerHTML) {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) {
+                              y[k].removeAttribute("class");
+                            }
+                            this.setAttribute("class", "same-as-selected");
+                            break;
+                          }
+                        }
+                        h.click();
+                    });
+                    b.appendChild(c);
+                  }
+                  x[i].appendChild(b);
+                  a.addEventListener("click", function(e) {
+                      /*when the select box is clicked, close any other select boxes,
+                      and open/close the current select box:*/
+                      e.stopPropagation();
+                      closeAllSelect(this);
+                      this.nextSibling.classList.toggle("select-hide");
+                      this.classList.toggle("select-arrow-active");
+                    });
+                }
+                function closeAllSelect(elmnt) {
+                  /*a function that will close all select boxes in the document,
+                  except the current select box:*/
+                  var x, y, i, xl, yl, arrNo = [];
+                  x = document.getElementsByClassName("select-items");
+                  y = document.getElementsByClassName("select-selected");
+                  xl = x.length;
+                  yl = y.length;
+                  for (i = 0; i < yl; i++) {
+                    if (elmnt == y[i]) {
+                      arrNo.push(i)
+                    } else {
+                      y[i].classList.remove("select-arrow-active");
+                    }
+                  }
+                  for (i = 0; i < xl; i++) {
+                    if (arrNo.indexOf(i)) {
+                      x[i].classList.add("select-hide");
+                    }
+                  }
+                }
+                /*if the user clicks anywhere outside the select box,
+                then close all select boxes:*/
+                document.addEventListener("click", closeAllSelect);
+                </script>
+
+            <div id="Damages">
+                <input type="text" placeholder="Magic Find" id="DamagesITN">
+                
+            </div>
+
+            <div id="cd">
+                <input type="text" placeholder="Cost of one Summoning Eye" id="cdITN">
+
+            </div>
+
+            <div id="chance">
+                <input type="text" placeholder="Summoning Eyes" id="chanceITN">
+
+                
+             
+            </div>
+
+            
+            <div id="basic_stats_str">
+
+
+              <div id="base_stats_container" >
+              
+                  
+                 
+                  <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragbase">
+                  <img src="supdargon.png" id="dragsup">
+                  <img src="strongdargon.png" id="dragstrong">
+                  <img src="youngdargon.png" id="dragyoung">
+                  <img src="unstabledargon.png" id="dragunstable">
+                  <img src="wizedargon.png" id="dragwize">
+                  <img src="protectordargon.png" id="dragprot">
+                  <img src="olddargon.png" id="dragold">
+  
+                  
+                  
+  
+                  <div data-stat="kills" class="stat-container stat-kills" id="containerid">
+                      <div class="stat-anchor"></div>
+                      <div class="stat-header"><span>Last Summon</span></div>
+                      <div class="stat-content">
+                          <p class="stat-raw-values">
+                              <span class="stat-name">Total Dragons: </span><span class="stat-value">2,080</span><br>
+                              <span class="stat-name">Total Loots: </span><span class="stat-value">9</span>
+                          </p>
+                          <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+  
+  
+  
+  
+  
+                    <div tabindex="3" data-item-id="c37f6848-161a-4450-96ce-78d7c3c5333a" data-item-index="311" class="rich-item wardrobe-piece piece piece-legendary-bg" onclick="gbstastscontent()" onmouseover="mouseoverloot()" onmouseout="onmouseleft()">
+                                      
+                      <div class="piece-shine"></div>
+                  
+                  <div class="piece-hover-area"></div>
+                  
+  <div style="background-image: url(https://sky.lea.moe/head/524c4da6ab27e9c93fbf49ea1b1fefaefbe2d4c0c8b222e2ff6b18179fb5addf?v6)" class="piece-icon item-icon  custom-icon icon-397_3">
+  </div>
+  
+              </div>
+                    <div id="stats_content" data-item-index="311" class="sticky-stats" style="left: 150px; top: 191px;" data-backpack-item-index="13">
+                      <div class="item-name piece-legendary-bg">
+                          <div style="background-image: url(https://sky.lea.moe/head/524c4da6ab27e9c93fbf49ea1b1fefaefbe2d4c0c8b222e2ff6b18179fb5addf?v6);" class="stats-piece-icon item-icon custom-icon"></div><span>Old Dragon Helmet</span><div class="close-lore"></div></div>
+                          <div class="item-lore"><span style="color: #AAAAAA">Health: </span><span style="color: #55FF55">+90 HP</span><br><span style="color: #AAAAAA">Defense: </span><span style="color: #55FF55">+110</span><br><br><span style="color: #FFAA00">Full Set Bonus: Old Blood</span><br><span style="color: #AAAAAA">Increases the strength of</span><br><span style="color: #AAAAAA"></span><span style="color: #8888FF">Growth</span><span style="color: #AAAAAA">, </span><span style="color: #8888FF">Protection</span><span style="color: #AAAAAA">,</span><br><span style="color: #AAAAAA"></span><span style="color: #8888FF">Feather Falling</span><span style="color: #AAAAAA">, </span><span style="color: #8888FF">Sugar</span><br><span style="color: #8888FF">Rush</span><span style="color: #AAAAAA">, and </span><span style="color: #8888FF">True Protection</span><span style="color: #AAAAAA"></span><br><span style="color: #AAAAAA">while worn.</span><br><br><span style="color: #AAAAAA"></span><span style="color: #CC3333">❣ </span><span style="color: #FF5555">Requires </span><span style="color: #55FF55">Combat Skill 16</span><br><span style="color: #AAAAAA"></span><span style="color: #CC3333">❣ </span><span style="color: #FF5555">Requires </span><span style="color: #55FF55">Catacombs Level 28</span><br><span style="color: #55FF55"></span><span style="color: #FF5555">while in Catacombs</span><br><span style="color: #FFAA00"><span style="font-weight: bold">LEGENDARY HELMET</span></span><br><br><span style="color: #AAAAAA">Obtained: </span><span style="color: #FF5555">Today</span></div>
+                      <div class="backpack-contents"></div>
+                  </div>
+  
+  
+  
+  
+  
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+  
+                    
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+  
+  
+                          </div>
+                      </div>
+                  </div>
+  
+  
+  
+  
+          
+                  <br/>
+                  <br/>
+                  
+  
+  
+  
+  
+                
+              </div>
+
+              <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  
+
+            <div id="basic_stats_def">
+
+
+              <div id="base_stats_container" >
+              
+                 
+                 
+                  <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragbasestats">
+
+                  
+                  
+
+                  <div data-stat="kills" class="stat-container stat-kills">
+                      <div class="stat-anchor"></div>
+                      <div class="stat-header"><span>Dragons History</span></div>
+                      <div class="stat-content">
+                          <p class="stat-raw-values">
+                              <span class="stat-name">Total Dragons: </span><span class="stat-value">2,080</span><br>
+                              <span class="stat-name">Total Loots: </span><span class="stat-value">9</span>
+                          </p>
+                          <div class="kills-deaths-container">
+                              <div class="narrow-info-container top-kills">
+                                  <div class="narrow-info-header">Loots</div>
+                                  <div class="narrow-info-content">
+                                      
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totprotectorpiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totoldpiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totwizepiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totyoungpiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totunstablepiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totstrongpiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totsuppiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Aotd's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totaotd"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Epic Pets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totepicpet"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Legendary Pets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totlegpet"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="bleu">Dragon Scale's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totscale"></span></div></div>
+
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Calw's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totclaw"></span></div></div>
+
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Horn's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="tothorn"></span></div></div>
+                                              
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Scrolls</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totscroll"></span></div></div>
+
+                                      
+                                          <div class="kill-stat show-all enabled" data-type="kills">show all</div>
+                                      
+                                  </div>
+                               </div>
+                              <div class="narrow-info-container top-deaths">
+                                  <div class="narrow-info-header">Dragons</div>
+                                  <div class="narrow-info-content">
+                                      
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="protectort"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="oldt"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="wizet"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="youngt"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="unstablet"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="strongt"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="superiort"></span></div></div>
+
+                                              <div class="kill-stat"><div class="kill-rank"></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank"></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank"></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank"></div></div>
+                                          
+                                      
+                                          <div class="kill-stat show-all " data-type="deaths">show all</div>
+
+                                      
+                                  </div>
+                              </div>
+
+
+
+
+
+                              <div id="stats_content_helmet" data-item-index="311" class="sticky-stats" style="left: 150px; top: 191px;" data-backpack-item-index="13">
+                                <div class="item-name piece-legendary-bg">
+                                    <div style="background-image: url(https://sky.lea.moe/head/524c4da6ab27e9c93fbf49ea1b1fefaefbe2d4c0c8b222e2ff6b18179fb5addf?v6);" class="stats-piece-icon item-icon custom-icon"></div><span>Dragons Helmets</span><div class="close-lore"></div></div>
+                                    <div class="item-lore"><span style="color: rgb(255, 198, 13);font-weight: 600">Superior Helmets: </span><span id = "suphelmet" style="color: #AAAAAA;font-weight: 600">0</span><br><span style="color: rgb(255, 198, 13);font-weight: 600">Superior Helmet Profits: </span><span id = "suphelmetprice" style="color: #AAAAAA;font-weight: 600">0</span><br><br><span style="color: rgb(201, 97, 56);font-weight: 600">Strong Helmets: </span><span id = "stronghelmet" style="color: AAAAAA;font-weight: 600">0</span><br><span style="color: rgb(201, 97, 56);font-weight: 600">Strong Helmet Profits: </span><span id = "stronghelmetprice" style="color: AAAAAA;font-weight: 600">0</span><br><br><span style="color: rgb(155, 0, 202);font-weight: 600">Unstable Helmets: </span><span id = "unstablehelmet" style="color: #AAAAAA;font-weight: 600">0</span><br><span style="color: rgb(155, 0, 202);font-weight: 600">Unstable Helmet Profits: </span><span id = "unstablehelmetprice" style="color: #AAAAAA;font-weight: 600">0</span><br><br><span style="color: rgb(115, 245, 115);font-weight: 600">Young Helmets: </span><span id = "younghelmet" style="color: AAAAAA;font-weight: 600">0</span><br><span style="color: rgb(115, 245, 115);font-weight: 600">Young Helmet Profits: </span><span id = "younghelmetprice" style="color: AAAAAA;font-weight: 600">0</span><br><br><span style="color: rgb(11, 224, 207);font-weight: 600">Wise Helmets: </span><span id = "wizehelmet" style="color: AAAAAA;font-weight: 600">0</span><br><span style="color: rgb(11, 224, 207);font-weight: 600">Wise Helmet Profits: </span><span id = "wizehelmetprice" style="color: AAAAAA;font-weight: 600">0</span><br><br><span style="color: rgb(180, 143, 74);font-weight: 600">Old Helmets: </span><span id = "oldhelmet" style="color: AAAAAA;font-weight: 600">0</span><br><span style="color: rgb(180, 143, 74);font-weight: 600">Old Helmet Profits: </span><span id = "oldhelmetprice" style="color: AAAAAA;font-weight: 600">0</span><br><br><span style="color: rgb(173, 169, 145);font-weight: 600">Protector Helmets: </span><span id = "protectorhelmet" style="color: AAAAAA;font-weight: 600">0</span><br><span style="color: rgb(173, 169, 145);font-weight: 600">Protector Helmet Profits: </span><span id = "protectorhelmetprice" style="color: AAAAAA;font-weight: 600">0</span><br></div>
+                                <div class="backpack-contents"></div>
+                            </div>
+
+
+
+
+                              <div class="narrow-info-container top-deaths">
+                                <div class="narrow-info-header">PIECES</div>
+                                <div class="narrow-info-content">
+                                    
+                                            <div onmouseover="onhelmet()" onmouseout="outhelmet()" class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Helmets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="helmetstats" ></span></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Chestplates</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="chestplatestats" onmouseover="clickchestplate()" onmouseout="clickchestplate()"></span></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Leggings</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="leggingstats" onmouseover="clickleggings()" onmouseout="clickleggings()"></span></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Boots</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="bootstats" onmouseover="clickboots()" onmouseout="clickboots()"></span></div></div>
+
+                                            <div class="kill-stat"><div class="kill-rank"></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank"></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank"></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank"></div></div>
+                                        
+                                            
+
+                                        <div class="kill-stat show-all " data-type="deaths">show all</div>
+
+                                    
+                                </div>
+                            </div>
+
+                          </div>
+                      </div>
+                  </div>
+
+
+
+
+          
+                  <br/>
+                  <br/>
+                  
+
+
+
+
+                  
+
+
+              </div>
+
+
+
+
+
+
+
+
+          </div>
+
+          <br/>
+                  
+               
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        
+
+        
+          <audio id="audioPlayer">
+            <source src="dragon.wav">
+        </audio>
+        
+        <body onload="document.getElementById('audioPlayer2').volume='0.2';">
+        <audio id="audioPlayer2" loop="true">
+          <source src="minecraft-music-boss.mp3">
+      </audio>
+ 
+      </body>
+
+                 <script>
+
+
+
+  //setInterval(compter, 10)
+  //setInterval(drag, 10)
+
+
+              
+     // Set var to 0 to avoid the problem with [SPAN Objet Class]
+     var cacherdragsup = document.getElementById("dragsup");
+     var cacherdragprot = document.getElementById("dragprot");
+     var cacherdragwize = document.getElementById("dragwize");
+     var cacherdragunstable = document.getElementById("dragunstable");
+     var cacherdragold = document.getElementById("dragold");
+     var cacherdragyoung = document.getElementById("dragyoung");
+     var cacherdragstrong = document.getElementById("dragstrong");
+     var cacherdesc = document.getElementById("stats_content");
+     var cacherstatshelmet = document.getElementById("stats_content_helmet");
+  
+
+
+     cacherdragsup.style.display = "none";
+     cacherdragprot.style.display = "none";
+     cacherdragwize.style.display = "none";
+     cacherdragunstable.style.display = "none";
+     cacherdragold.style.display = "none";
+     cacherdragyoung.style.display = "none";
+     cacherdragstrong.style.display = "none";
+     cacherdesc.style.display = "none";
+     cacherstatshelmet.style.display = "none";
+              
+              // Set var to 0 to avoid the problem with [SPAN Objet Class]
+                 var all = 0;
+
+                 document.getElementById("place").innerHTML= all;
+                 document.getElementById("cost1").innerHTML=all;
+                 document.getElementById("mf").innerHTML=all + "%";
+                 document.getElementById("eyelast").innerHTML=all;
+                
+
+
+
+                 var totdrag = 0;
+                 eyelastnew = 0;
+                 var totcost = 0;
+
+
+                 document.getElementById("totdrag").innerHTML=totdrag;
+                 document.getElementById("toteye").innerHTML=all;
+                 document.getElementById("totalcost").innerHTML=all;
+
+
+
+
+                 document.getElementById("weigth").innerHTML=all;
+
+
+
+                 
+
+
+                 toteye = 0;
+                 ancientot = 0;
+
+
+
+
+                 dragonfraglol = {
+    "SUPERIOR": {
+      fragpricetot: 0
+    },
+
+    "STRONG": {
+      fragpricetot: 0
+      },
+
+      "UNSTABLE": {
+        fragpricetot: 0
+      },
+
+      "WIZE": {
+        fragpricetot: 0
+      },
+
+      "YOUNG": {
+        fragpricetot: 0
+      },
+
+      "PROTECTOR": {
+        fragpricetot: 0
+      },
+
+      "OLD": {
+        fragpricetot: 0
+      },
+
+      "FRAG": {
+        
+      },
+}
+
+
+
+
+
+
+                 dragonfraglol["OLD"].fragtot = 0;
+dragonfraglol["WIZE"].fragtot = 0;
+dragonfraglol["YOUNG"].fragtot = 0;
+dragonfraglol["UNSTABLE"].fragtot = 0;
+dragonfraglol["STRONG"].fragtot = 0;
+dragonfraglol["SUPERIOR"].fragtot = 0;
+dragonfraglol["PROTECTOR"].fragtot = 0;
+
+
+
+
+dragonlootlol = {
+    "SUPERIOR": {
+      helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+
+
+    },
+
+    "STRONG": {
+      helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "UNSTABLE": {
+        helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "WIZE": {
+        helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "YOUNG": {
+        helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "PROTECTOR": {
+        helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "OLD": {
+        helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "CLAW": {
+      tot: 0,
+      totprice: 0,
+      clawprice: 0,
+
+      },
+
+      "SCALE": {
+        tot: 0,
+      totprice: 0,
+      scaleprice: 0,
+      },
+
+      "HORN": {
+        tot: 0,
+      totprice: 0,
+      hornprice: 0,
+      },
+
+      "PETLEG": {
+        tot: 0,
+      totprice: 0,
+      petlegprice: 0,
+      },
+
+      "PETEPIC": {
+        tot: 0,
+      totprice: 0,
+      petepicprice: 0, 
+      },
+
+      "AOTD": {
+        tot: 0,
+      totprice: 0,
+      aotdprice: 0,
+      },
+
+    }
+
+
+  
+
+
+
+
+
+                 function totsumm(){
+
+
+                     anciennbeye = document.getElementById("chanceITN").value;
+
+                     if (anciennbeye == 0) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 1) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 2) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 3) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 4) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 5) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 6) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 7) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 8) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+                     
+
+
+                      document.getElementById("toteye").innerHTML=toteye;
+                      toteye= document.getElementById("toteye").value;
+                      console.log(anciennbeye)
+
+
+}
+
+                 
+weigthnb = 0;
+
+function weigth(){
+
+
+  summoningeyes = document.getElementById("chanceITN").value;
+
+  if (summoningeyes == 0) {
+    weigthnb = 0
+  }
+  if (summoningeyes == 1) {
+    weigthnb = 100
+  }
+  if (summoningeyes == 2) {
+    weigthnb = 200
+  }
+  if (summoningeyes == 3) {
+    weigthnb = 300
+  }
+  if (summoningeyes == 4) {
+    weigthnb = 400
+  }
+  if (summoningeyes > 4) {
+    weigthnb = 400
+  }
+
+
+  placef = document.getElementById("idlist").value;
+
+
+  if (placef == 1) {
+    weigthnb=+ 300 -(-0) + 1*weigthnb
+  }
+  if (placef == 2) {
+    weigthnb=+ 250 -(-0) + 1*weigthnb
+  }
+  if (placef == 3) {
+    weigthnb=+ 200 -(-0) + 1*weigthnb
+  }
+  if (placef == 4) {
+    weigthnb=+ 125 -(-0) + 1*weigthnb
+  }
+  if (placef == 5) {
+    weigthnb=+ 125 -(-0) + 1*weigthnb
+  }
+  if (placef == 6) {
+    weigthnb=+ 125 -(-0) + 1*weigthnb
+  }
+  if (placef == 7) {
+    weigthnb=+ 125 -(-0) + 1*weigthnb
+  }
+  if (placef == 8) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 9) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 10) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 11) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 12) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 13) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 14) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 15) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 16) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 17) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 18) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 19) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 20) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 21) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 22) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 23) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 24) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 25) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 26) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 27) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 28) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+
+
+  document.getElementById("weigth").innerHTML=weigthnb;
+
+}
+
+ancientot2 = 0;
+toteye2 = 0;
+anciennbeye2 = 0;
+function totcostu(){
+
+
+
+anciennbeye2 = document.getElementById("chanceITN").value;
+console.log(anciennbeye2)
+
+if (anciennbeye2 == 0) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 1) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 2) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 3) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 4) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 5) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 6) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 7) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 8) {
+ totey2e = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+ 
+}
+
+
+fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+  var costofone= bazaar.products.SUMMONING_EYE.quick_status.buyPrice
+    costofone = parseFloat(costofone)
+
+
+
+
+
+costautotal = toteye2*costofone
+
+ document.getElementById("totalcost").innerHTML=costautotal
+
+
+})
+
+}
+
+function placest(){
+
+ lol = document.getElementById("idlist").value;
+ document.getElementById("place").innerHTML=lol;
+ console.log(lol)
+}
+
+
+
+
+function looter() {
+  var dragon = Math.floor(Math.random() * 100) + 1
+  var alreadyloot = "no"
+
+  if (dragon <= 4 ) {
+    dragon = "SUPERIOR"
+  }
+  if (dragon <= 20 &&dragon > 4) {
+    dragon = "STRONG"
+  }
+  if (dragon <= 36 &&dragon > 20) {
+    dragon = "UNSTABLE"
+  }
+  if (dragon <= 52 &&dragon > 36) {
+    dragon = "WIZE"
+  }
+  if (dragon <= 68 &&dragon > 52) {
+    dragon = "OLD"
+  }
+  if (dragon <= 84 &&dragon > 68) {
+    dragon = "YOUNG"
+  }
+  if (dragon <= 100 &&dragon > 84) {
+    dragon = "PROTECTOR"
+  }
+  
+  var dragcalcul = dragon
+
+  
+
+  
+
+  if (weigthnb > 22) {
+      lootpossible = {
+      BOOTS: 300,
+      LEGGINGS: 350,
+      CHESTPLATE: 400,
+      HELMET: 325,
+      PET: 450,
+      CLAW: 450,
+      SCALE: 450,
+      AOTD: 450,
+      SCROLL: 250,
+      HORN: 450,
+    }
+    console.log("------")
+    console.log(weigthnb)
+    console.log("------")
+    
+    
+    var eyelast = document.getElementById("chanceITN").value;
+
+    if (alreadyloot == "no" && weigthnb > 324) {
+     //HELMET
+     var a = Math.random();
+
+  if (weigth == 325 ) {
+   var b = 0.16;
+   }
+
+  if (weigth == 350 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 375 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 400 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 425 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 450 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 475 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 500 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 525 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 550 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 575 ) {
+   var b = 0.21;
+   }
+   
+   if (weigth == 600 ) {
+   var b = 0.22;
+   }
+   
+   if (weigth == 625 ) {
+   var b = 0.23;
+   }
+   
+   if (weigth == 650 ) {
+   var b = 0.24;
+   }
+   
+   if (weigth == 675 ) {
+   var b = 0.25;
+   }
+   
+   if (weigth == 700 ) {
+   var b = 5;
+   }
+   
+  if (a < b) {
+            var LOOT = 3;
+            var alreadyloot = "yes"
+            helmetf()
+		
+					}
+   }
+
+    if (dragon == "SUPERIOR" && alreadyloot == "no" && weigthnb > 449) {
+     //HORN
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+      var random = Math.floor(Math.random() * 15) + 1;
+      var placecalcul = 0.05 / placef
+      var a = Math.random();
+      var b = 0.06 * (eyemoment	/ random ) + placecalcul
+    if (a < b) {
+     var LOOT = 7;
+     var alreadyloot = "yes"
+     horn()
+   }
+   }
+
+   
+
+   if (alreadyloot == "no" && weigthnb > 449) {
+     //CLAW
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+      var random = Math.floor(Math.random() * 15) + 1;
+      var placecalcul = 0.05 / placef
+      var a = Math.random();
+      var b = 0.06 * (eyemoment	/ random ) + placecalcul
+    if (a < b) {
+     var LOOT = 8;
+     var alreadyloot = "yes"
+     claw()
+   }
+   }
+   
+   
+
+   if (alreadyloot == "no" && weigthnb > 449 && dragon == "PROTECTOR" || dragon == "UNSTABLE" || dragon == "WIZE" || dragon == "OLD" || dragon == "YOUNG" || dragon == "STRONG") {
+     //SCALE
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+      var random = Math.floor(Math.random() * 25 ) + 1;
+      var placecalcul = 0.01 / placef
+      var a = Math.random();
+      var b = 0.01 * (eyemoment	/ random ) + (placecalcul + placecalcul)
+    if (a < b) {
+     var LOOT = 9;
+     var alreadyloot = "yes"
+     scale()
+   }
+   }
+   
+   console.log(a)
+   console.log(b)
+   console.log(eyemoment)
+   console.log(random)
+   console.log(placecalcul)
+   console.log(placef)
+
+   if (dragon == "UNSTABLE" && alreadyloot == "no" && weigthnb > 249) {
+     //SCROLL
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+      var random = Math.floor(Math.random() * 15) + 1;
+      var placecalcul = 0.03 / placef
+      var a = Math.random();
+      var b = 0.06 * (eyemoment	/ random ) + placecalcul
+    if (a < b) {
+     var LOOT = 10;
+     var alreadyloot = "yes"
+     scroll()
+   }
+   }
+
+   
+
+
+    if (alreadyloot == "no" && weigthnb > 449) {
+      //PET
+      var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+    var a = Math.random();
+    var b = 0.001 * eyemoment;
+    if (a < b) {
+     if (Math.random() < 0.2) {
+       var LOOT = 6;
+       var alreadyloot = "yes"
+       legpet()
+      } else {
+        var LOOT = 5;
+        var alreadyloot = "yes"
+        epicpet()
+     } 
+    }
+   }
+
+   
+   
+   if (alreadyloot == "no" && weigthnb > 449) {
+     //SWORD
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+    var a = Math.random();
+    var b = 0.058 * eyemoment		
+    if (a < b) {
+     var LOOT = 0;
+     var alreadyloot = "yes"
+     aotd()
+   }
+   }
+
+   
+   
+
+   if (alreadyloot == "no" && weigthnb > 399) {
+     //CHESTPLATE
+     var a = Math.random();
+  
+  if (weigth == 400 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 425 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 450 ) {
+   var b = 0.19;
+   }
+   
+   if (weigth == 475 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 500 ) {
+   var b = 0.23;
+   }
+   
+   if (weigth == 525 ) {
+   var b = 0.24;
+   }
+   
+   if (weigth == 550 ) {
+   var b = 0.25;
+   }
+   
+   if (weigth == 575 ) {
+   var b = 0.26;
+   }
+   
+   if (weigth == 600 ) {
+   var b = 0.27;
+   }
+   
+   if (weigth == 625 ) {
+   var b = 0.28;
+   }
+   
+   if (weigth == 650 ) {
+   var b = 0.29;
+   }
+   
+   if (weigth == 675 ) {
+   var b = 0.30;
+   }
+   
+   if (weigth == 700 ) {
+   var b = 0.31;
+   }
+   
+  if (a < b) {
+            var LOOT = 1;
+            var alreadyloot = "yes"
+            chestplatef()
+		
+					}
+   }
+
+   
+
+   if (alreadyloot == "no" && weigthnb > 349) {
+     //LEGGINGS
+     var a = Math.random();
+  
+  if (weigth == 350 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 375 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 400 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 425 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 450 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 475 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 500 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 525 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 550 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 575 ) {
+   var b = 0.21;
+   }
+   
+   if (weigth == 600 ) {
+   var b = 0.22;
+   }
+   
+   if (weigth == 625 ) {
+   var b = 0.23;
+   }
+   
+   if (weigth == 650 ) {
+   var b = 0.24;
+   }
+   
+   if (weigth == 675 ) {
+   var b = 0.25;
+   }
+   
+   if (weigth == 700 ) {
+   var b = 0.25;
+   }
+   
+  if (a < b) {
+            var LOOT = 2;
+            var alreadyloot = "yes"
+            leggingsf()
+		
+					}
+   }
+
+   
+
+//HELMET
+
+   
+
+   if (alreadyloot == "no" && weigthnb > 299) {
+     //BOOTS
+     var a = Math.random();
+
+  if (weigth == 300 ) {
+   var b = 0.20;
+   }
+
+  if (weigth == 325 ) {
+   var b = 0.20;
+   }
+
+  if (weigth == 350 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 375 ) {
+   var b = 0.21;
+   }
+   
+   if (weigth == 400 ) {
+   var b = 0.22;
+   }
+   
+   if (weigth == 425 ) {
+   var b = 0.22;
+   }
+
+   if (weigth == 450 ) {
+   var b = 0.23;
+   }
+
+   if (weigth == 475 ) {
+   var b = 0.25;
+   }
+   
+   if (weigth == 500 ) {
+   var b = 0.26;
+   }
+   
+   if (weigth == 525 ) {
+   var b = 0.26;
+   }
+   
+   if (weigth == 550 ) {
+   var b = 0.26;
+   }
+   
+   if (weigth == 575 ) {
+   var b = 0.27;
+   }
+   
+   if (weigth == 600 ) {
+   var b = 0.27;
+   }
+   
+   if (weigth == 625 ) {
+   var b = 0.28;
+   }
+   
+   if (weigth == 650 ) {
+   var b = 0.29;
+   }
+   
+   if (weigth == 675 ) {
+   var b = 0.30;
+   }
+   
+   if (weigth == 700 ) {
+   var b = 0.33;
+   }
+   
+  if (a < b) {
+            var LOOT = 4;
+            var alreadyloot = "yes"
+            bootsf()
+		
+					}
+   }
+   
+   
+
+
+   var fragWeight = weigthnb;
+				if (LOOT == 0 || LOOT == 5 || LOOT == 6) {
+					fragWeight = fragWeight - 450;
+				}
+				if (LOOT == 1) {
+					fragWeight = fragWeight - 400;
+				}
+				if (LOOT == 2) {
+					fragWeight = fragWeight - 350;
+				}
+				if (LOOT == 3) {
+					fragWeight = fragWeight - 350;
+				}
+				if (LOOT == 4) {
+					fragWeight = fragWeight - 300;
+        }
+				var frags = Math.floor(fragWeight / 22);
+              	if(frags < 3 && LOOT == -1) frags = 3;
+			
+
+
+  }
+
+
+ var LOOTFINAL = LOOT
+ if (LOOTFINAL = 1 || 2 || 3 || 4) {
+   if (dragon == "PROTECTOR") {
+     var LOOTFINAL = 10+ LOOTFINAL
+   }
+   if (dragon == "OLD") {
+     var LOOTFINAL = 20+ LOOTFINAL
+   }
+   if (dragon == "WIZE") {
+     var LOOTFINAL = 30+ LOOTFINAL
+   }
+   if (dragon == "YOUNG") {
+     var LOOTFINAL = 40+ LOOTFINAL
+   }
+   if (dragon == "UNSTABLE") {
+     var LOOTFINAL = 50+ LOOTFINAL
+   }
+   if (dragon == "STRONG") {
+     var LOOTFINAL = 60+ LOOTFINAL
+   }
+   if (dragon == "SUPERIOR") {
+     var LOOTFINAL = 70+ LOOTFINAL
+   }
+ }
+ var FRAGFINAL = frags
+ 
+
+console.log("-----------")
+console.log(LOOT + " =LOOT")
+console.log(FRAGFINAL + " Frags")
+console.log(dragon)
+
+
+
+if (dragon == "PROTECTOR") {
+  dragonfraglol["PROTECTOR"].fraglast = FRAGFINAL 
+  dragonfraglol["PROTECTOR"].fragtot = FRAGFINAL + dragonfraglol["PROTECTOR"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["PROTECTOR"].fragpricelast = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["PROTECTOR"].fraglast)
+    dragonfraglol["PROTECTOR"].fragpricetot = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["PROTECTOR"].fragtot)
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+}
+
+if (dragon == "SUPERIOR") {
+  dragonfraglol["SUPERIOR"].fraglast = FRAGFINAL
+  dragonfraglol["SUPERIOR"].fragtot = FRAGFINAL + dragonfraglol["SUPERIOR"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["SUPERIOR"].fragpricelast = parseFloat(bazaar.products.SUPERIOR_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["SUPERIOR"].fraglast)
+    dragonfraglol["SUPERIOR"].fragpricetot = parseFloat(bazaar.products.SUPERIOR_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["SUPERIOR"].fragtot)
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+}
+
+if (dragon == "STRONG") {
+  dragonfraglol["STRONG"].fraglast = FRAGFINAL
+  dragonfraglol["STRONG"].fragtot = FRAGFINAL + dragonfraglol["STRONG"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["STRONG"].fragpricelast = parseFloat(bazaar.products.STRONG_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["STRONG"].fraglast)
+    dragonfraglol["STRONG"].fragpricetot = parseFloat(bazaar.products.STRONG_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["STRONG"].fragtot)
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+
+}
+
+if (dragon == "UNSTABLE") {
+  dragonfraglol["UNSTABLE"].fraglast = FRAGFINAL
+  dragonfraglol["UNSTABLE"].fragtot = FRAGFINAL + dragonfraglol["UNSTABLE"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["UNSTABLE"].fragpricelast = parseFloat(bazaar.products.UNSTABLE_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["UNSTABLE"].fraglast)
+    dragonfraglol["UNSTABLE"].fragpricetot = parseFloat(bazaar.products.UNSTABLE_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["UNSTABLE"].fragtot)
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+
+}
+
+if (dragon == "YOUNG") {
+  dragonfraglol["YOUNG"].fraglast = FRAGFINAL
+  dragonfraglol["YOUNG"].fragtot = FRAGFINAL + dragonfraglol["YOUNG"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["YOUNG"].fragpricelast = parseFloat(bazaar.products.YOUNG_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["YOUNG"].fraglast)
+    dragonfraglol["YOUNG"].fragpricetot = parseFloat(bazaar.products.YOUNG_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["YOUNG"].fragtot)
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+
+}
+
+if (dragon == "WIZE") {
+  dragonfraglol["WIZE"].fraglast = FRAGFINAL
+  dragonfraglol["WIZE"].fragtot = FRAGFINAL + dragonfraglol["WIZE"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["WIZE"].fragpricelast = parseFloat(bazaar.products.WISE_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["WIZE"].fraglast)
+    dragonfraglol["WIZE"].fragpricetot = parseFloat(bazaar.products.WISE_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["WIZE"].fragtot)
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+
+}
+
+if (dragon == "OLD") {
+  dragonfraglol["OLD"].fraglast = FRAGFINAL
+  dragonfraglol["OLD"].fragtot = FRAGFINAL + dragonfraglol["OLD"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["OLD"].fragpricelast = parseFloat(bazaar.products.OLD_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["OLD"].fraglast)
+    dragonfraglol["OLD"].fragpricetot = parseFloat(bazaar.products.OLD_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["OLD"].fragtot)
+
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+
+}
+
+
+
+//
+
+
+if (dragon == "PROTECTOR") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  protectorpiece()
+}
+
+if (LOOT == 1) {
+  dragonlootlol["PROTECTOR"].chestplate = dragonlootlol["PROTECTOR"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["PROTECTOR"].chestplateprice = totcalc/auction.length/2
+     dragonlootlol["PROTECTOR"].chestplatetotprice = dragonlootlol["PROTECTOR"].chestplateprice * dragonlootlol["PROTECTOR"].chestplate
+  
+  }
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["PROTECTOR"].leggings = dragonlootlol["PROTECTOR"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["PROTECTOR"].leggingsprice = totcalc/auction.length/2
+     dragonlootlol["PROTECTOR"].leggingstotprice = dragonlootlol["PROTECTOR"].leggingsprice * dragonlootlol["PROTECTOR"].leggings
+  }
+  
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["PROTECTOR"].helmet = dragonlootlol["PROTECTOR"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+  
+  
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["PROTECTOR"].helmetprice = totcalc/auction.length/2
+     dragonlootlol["PROTECTOR"].helmettotprice = dragonlootlol["PROTECTOR"].helmetprice * dragonlootlol["PROTECTOR"].helmet
+     
+  }
+  
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["PROTECTOR"].boots = dragonlootlol["PROTECTOR"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["PROTECTOR"].bootsprice = totcalc/auction.length/2
+     dragonlootlol["PROTECTOR"].bootstotprice = dragonlootlol["PROTECTOR"].bootsprice * dragonlootlol["PROTECTOR"].boots
+  
+  }
+})
+}
+
+
+}
+
+if (dragon == "SUPERIOR") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  suppiece()
+}
+
+if (LOOT == 1) {
+  dragonlootlol["SUPERIOR"].chestplate = dragonlootlol["SUPERIOR"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["SUPERIOR"].chestplateprice = totcalc/auction.length/2
+     dragonlootlol["SUPERIOR"].chestplatetotprice = dragonlootlol["SUPERIOR"].chestplateprice * dragonlootlol["SUPERIOR"].chestplate
+  }
+  }
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["SUPERIOR"].leggings = dragonlootlol["SUPERIOR"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["SUPERIOR"].leggingsprice = totcalc/auction.length/2
+     dragonlootlol["SUPERIOR"].leggingstotprice = dragonlootlol["SUPERIOR"].leggingsprice * dragonlootlol["SUPERIOR"].leggings
+  }
+  }
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["SUPERIOR"].helmet = dragonlootlol["SUPERIOR"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["SUPERIOR"].helmetprice = totcalc/auction.length/2
+     dragonlootlol["SUPERIOR"].helmettotprice = dragonlootlol["SUPERIOR"].helmetprice * dragonlootlol["SUPERIOR"].helmet
+  }
+  }
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["SUPERIOR"].boots = dragonlootlol["SUPERIOR"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["SUPERIOR"].bootsprice = totcalc/auction.length/2
+     dragonlootlol["SUPERIOR"].bootstotprice = dragonlootlol["SUPERIOR"].bootsprice * dragonlootlol["SUPERIOR"].boots
+  }
+  }
+})
+}
+
+}
+
+if (dragon == "STRONG") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  strongpiece()
+}
+
+if (LOOT == 1) {
+  dragonlootlol["STRONG"].chestplate = dragonlootlol["STRONG"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["STRONG"].chestplateprice = totcalc/auction.length/2
+     dragonlootlol["STRONG"].chestplatetotprice = dragonlootlol["STRONG"].chestplateprice * dragonlootlol["STRONG"].chestplate
+  }
+  }
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["STRONG"].leggings = dragonlootlol["STRONG"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["STRONG"].leggingsprice = totcalc/auction.length/2
+     dragonlootlol["STRONG"].leggingstotprice = dragonlootlol["STRONG"].leggingsprice * dragonlootlol["STRONG"].leggings
+  }
+  }
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["STRONG"].helmet = dragonlootlol["STRONG"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["STRONG"].helmetprice = totcalc/auction.length/2
+     dragonlootlol["STRONG"].helmettotprice = dragonlootlol["STRONG"].helmetprice * dragonlootlol["STRONG"].helmet
+  }
+  }
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["STRONG"].boots = dragonlootlol["STRONG"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["STRONG"].bootsprice = totcalc/auction.length/2
+     dragonlootlol["STRONG"].bootstotprice = dragonlootlol["STRONG"].bootsprice * dragonlootlol["STRONG"].boots
+  }
+  }
+})
+}
+
+}
+
+if (dragon == "UNSTABLE") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  unstablepiece()
+}
+
+if (LOOT == 1) {
+  dragonlootlol["UNSTABLE"].chestplate = dragonlootlol["UNSTABLE"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["UNSTABLE"].chestplateprice = totcalc/auction.length/2
+     dragonlootlol["UNSTABLE"].chestplatetotprice = dragonlootlol["UNSTABLE"].chestplateprice * dragonlootlol["UNSTABLE"].chestplate
+  }
+  
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["UNSTABLE"].leggings = dragonlootlol["UNSTABLE"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["UNSTABLE"].leggingsprice = totcalc/auction.length/2
+     dragonlootlol["UNSTABLE"].leggingstotprice = dragonlootlol["UNSTABLE"].leggingsprice * dragonlootlol["UNSTABLE"].leggings
+  }
+  
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["UNSTABLE"].helmet = dragonlootlol["UNSTABLE"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["UNSTABLE"].helmetprice = totcalc/auction.length/2
+     dragonlootlol["UNSTABLE"].helmettotprice = dragonlootlol["UNSTABLE"].helmetprice * dragonlootlol["UNSTABLE"].helmet
+  }
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["UNSTABLE"].boots = dragonlootlol["UNSTABLE"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["UNSTABLE"].bootsprice = totcalc/auction.length/2
+     dragonlootlol["UNSTABLE"].bootstotprice = dragonlootlol["UNSTABLE"].bootsprice * dragonlootlol["UNSTABLE"].boots
+  }
+  
+})
+}
+
+}
+
+if (dragon == "YOUNG") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  youngpiece()
+}
+
+if (LOOT == 1) {
+  dragonlootlol["YOUNG"].chestplate = dragonlootlol["YOUNG"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["YOUNG"].chestplateprice = totcalc/auction.length
+     dragonlootlol["YOUNG"].chestplatetotprice = dragonlootlol["YOUNG"].chestplateprice * dragonlootlol["YOUNG"].chestplate
+  }
+  }
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["YOUNG"].leggings = dragonlootlol["YOUNG"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["YOUNG"].leggingsprice = totcalc/auction.length
+     dragonlootlol["YOUNG"].leggingstotprice = dragonlootlol["YOUNG"].leggingsprice * dragonlootlol["YOUNG"].leggings
+  }
+  }
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["YOUNG"].helmet = dragonlootlol["YOUNG"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["YOUNG"].helmetprice = totcalc/auction.length
+     dragonlootlol["YOUNG"].helmettotprice = dragonlootlol["YOUNG"].helmetprice * dragonlootlol["YOUNG"].helmet
+  }
+  }
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["YOUNG"].boots = dragonlootlol["YOUNG"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["YOUNG"].bootsprice = totcalc/auction.length
+     dragonlootlol["YOUNG"].bootstotprice = dragonlootlol["YOUNG"].bootsprice * dragonlootlol["YOUNG"].boots
+  }
+  }
+})
+}
+
+}
+
+if (dragon == "WIZE") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  wizepiece()
+}
+
+if (LOOT == 1) {
+  dragonlootlol["WIZE"].chestplate = dragonlootlol["WIZE"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["WIZE"].chestplateprice = totcalc/auction.length/2
+     dragonlootlol["WIZE"].chestplatetotprice = dragonlootlol["WIZE"].chestplateprice * dragonlootlol["WIZE"].chestplate
+  }
+  }
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["WIZE"].leggings = dragonlootlol["WIZE"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["WIZE"].leggingsprice = totcalc/auction.length/2
+     dragonlootlol["WIZE"].leggingstotprice = dragonlootlol["WIZE"].leggingsprice * dragonlootlol["WIZE"].leggings
+  }
+  }
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["WIZE"].helmet = dragonlootlol["WIZE"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["WIZE"].helmetprice = totcalc/auction.length/2
+     dragonlootlol["WIZE"].helmettotprice = dragonlootlol["WIZE"].helmetprice * dragonlootlol["WIZE"].helmet
+  }
+  }
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["WIZE"].boots = dragonlootlol["WIZE"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["WIZE"].bootsprice = totcalc/auction.length/2
+     dragonlootlol["WIZE"].bootstotprice = dragonlootlol["WIZE"].bootsprice * dragonlootlol["WIZE"].boots
+  }
+  }
+})
+}
+
+}
+
+
+
+
+
+
+if (dragon == "OLD") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT ==  4) {
+  oldpiece()
+}
+
+if (LOOT == 1) {
+  dragonlootlol["OLD"].chestplate = dragonlootlol["OLD"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["OLD"].chestplateprice = totcalc/auction.length/2
+     dragonlootlol["OLD"].chestplatetotprice = dragonlootlol["OLD"].chestplateprice * dragonlootlol["OLD"].chestplate
+  }
+  }
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["OLD"].leggings = dragonlootlol["OLD"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["OLD"].leggingsprice = totcalc/auction.length/2
+     dragonlootlol["OLD"].leggingstotprice = dragonlootlol["OLD"].leggingsprice * dragonlootlol["OLD"].leggings
+  }
+  }
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["OLD"].helmet = dragonlootlol["OLD"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["OLD"].helmetprice = totcalc/auction.length/2
+     dragonlootlol["OLD"].helmettotprice = dragonlootlol["OLD"].helmetprice * dragonlootlol["OLD"].helmet
+  }
+  }
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["OLD"].boots = dragonlootlol["OLD"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+  if (auction[i].anvils == "No Anvil Uses" || "") {
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["OLD"].bootsprice = totcalc/auction.length/2
+     dragonlootlol["OLD"].bootstotprice = dragonlootlol["OLD"].bootsprice * dragonlootlol["OLD"].boots
+  }
+  }
+})
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+if (dragon == "PROTECTOR") {
+  protector()
+}
+
+
+if (dragon == "SUPERIOR") {
+
+  sup()
+}
+
+
+if (dragon == "STRONG") {
+
+  strong()
+}
+
+
+if (dragon == "UNSTABLE") {
+
+  unstable()
+}
+
+
+if (dragon == "YOUNG") {
+ 
+  young()
+}
+
+
+if (dragon == "WIZE") {
+
+  wize()
+}
+
+
+if (dragon == "OLD") {
+
+  old()
+}
+
+
+document.getElementById("suphelmet").innerHTML=Math.round(dragonlootlol["SUPERIOR"].helmet);
+document.getElementById("suphelmetprice").innerHTML=Math.round(dragonlootlol["SUPERIOR"].helmettotprice);
+
+document.getElementById("stronghelmetprice").innerHTML=Math.round(dragonlootlol["STRONG"].helmettotprice);
+document.getElementById("stronghelmet").innerHTML=Math.round(dragonlootlol["STRONG"].helmet);
+
+document.getElementById("unstablehelmetprice").innerHTML=Math.round(dragonlootlol["UNSTABLE"].helmettotprice);
+document.getElementById("unstablehelmet").innerHTML=Math.round(dragonlootlol["UNSTABLE"].helmet);
+
+document.getElementById("wizehelmetprice").innerHTML=Math.round(dragonlootlol["WIZE"].helmettotprice);
+document.getElementById("wizehelmet").innerHTML=Math.round(dragonlootlol["WIZE"].helmet);
+
+document.getElementById("younghelmetprice").innerHTML=Math.round(dragonlootlol["YOUNG"].helmettotprice);
+document.getElementById("younghelmet").innerHTML=Math.round(dragonlootlol["YOUNG"].helmet);
+
+document.getElementById("oldhelmetprice").innerHTML=Math.round(dragonlootlol["OLD"].helmettotprice);
+document.getElementById("oldhelmet").innerHTML=Math.round(dragonlootlol["OLD"].helmet);
+
+document.getElementById("protectorhelmetprice").innerHTML=Math.round(dragonlootlol["PROTECTOR"].helmettotprice);
+document.getElementById("protectorhelmet").innerHTML=Math.round(dragonlootlol["PROTECTOR"].helmet);
+
+
+
+
+
+
+
+/*document.getElementById("supchestplateprice").innerHTML=dragonlootlol["SUPERIOR"].chestplate;
+document.getElementById("supleggingsprice").innerHTML=dragonlootlol["SUPERIOR"].leggings;
+document.getElementById("supbootsprice").innerHTML=dragonlootlol["SUPERIOR"].boots;
+*/
+
+/*document.getElementById("supchestplate").innerHTML=dragonlootlol["SUPERIOR"].chestplate;
+document.getElementById("supleggings").innerHTML=dragonlootlol["SUPERIOR"].leggings;
+document.getElementById("supboots").innerHTML=dragonlootlol["SUPERIOR"].boots;
+*/
+
+}
+
+
+
+
+
+// Set var to 0 to avoid the problem with [SPAN Objet Class]
+totaotd = 0
+document.getElementById("totaotd").innerHTML=all;
+
+totclaw = 0
+document.getElementById("totclaw").innerHTML=all;
+
+tothorn = 0
+document.getElementById("tothorn").innerHTML=all;
+
+totscale = 0
+document.getElementById("totscale").innerHTML=all;
+
+totscroll = 0
+document.getElementById("totscroll").innerHTML=all;
+
+totlegpet= 0
+document.getElementById("totlegpet").innerHTML=all;
+
+totepicpet = 0
+document.getElementById("totepicpet").innerHTML=all;
+
+totsuppiece = 0
+document.getElementById("totsuppiece").innerHTML=all;
+
+totstrongpiece = 0
+document.getElementById("totstrongpiece").innerHTML=all;
+
+totunstablepiece = 0
+document.getElementById("totunstablepiece").innerHTML=all;
+
+totyoungpiece = 0
+document.getElementById("totyoungpiece").innerHTML=all;
+
+totwizepiece = 0
+document.getElementById("totwizepiece").innerHTML=all;
+
+totoldpiece = 0
+document.getElementById("totoldpiece").innerHTML=all;
+
+totprotectorpiece = 0
+document.getElementById("totprotectorpiece").innerHTML=all;
+
+
+function claw() {
+
+  totclaw= 1+ totclaw;
+
+  dragonlootlol["CLAW"].tot = dragonlootlol["CLAW"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=dragon%20claw")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["CLAW"].clawprice = totcalc/auction.length/2
+   dragonlootlol["CLAW"].totprice = dragonlootlol["CLAW"].clawprice * dragonlootlol["CLAW"].tot
+}
+
+})
+
+document.getElementById("totclaw").innerHTML= totclaw;
+}
+
+
+
+
+function horn() {
+
+tothorn+= 1;
+
+
+dragonlootlol["HORN"].tot = dragonlootlol["HORN"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=dragon%20horn")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["HORN"].hornprice = totcalc/auction.length/2
+   dragonlootlol["HORN"].totprice = dragonlootlol["HORN"].hornprice * dragonlootlol["HORN"].tot
+}
+
+})
+
+document.getElementById("tothorn").innerHTML= tothorn;
+}
+
+
+
+
+function scale() {
+
+totscale+= 1;
+
+dragonlootlol["SCALE"].tot = dragonlootlol["SCALE"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=dragon%20scale")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["SCALE"].scaleprice = totcalc/auction.length
+   dragonlootlol["SCALE"].totprice = dragonlootlol["SCALE"].scaleprice * dragonlootlol["SCALE"].tot
+}
+
+})
+
+document.getElementById("totscale").innerHTML= totscale;
+}
+
+
+
+
+function legpet() {
+
+totlegpet+= 1;
+
+dragonlootlol["PETLEG"].tot = dragonlootlol["PETLEG"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=ender%20dragon")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  if (auction[i].tier == "LEGENDARY") {
+    lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["PETLEG"].petlegprice = totcalc/auction.length
+   dragonlootlol["PETLEG"].totprice = dragonlootlol["PETLEG"].petlegprice * dragonlootlol["PETLEG"].tot
+  }
+  
+}
+
+})
+
+document.getElementById("totlegpet").innerHTML= totlegpet;
+}
+
+
+
+
+function epicpet() {
+
+totepicpet+= 1;
+
+dragonlootlol["PETEPIC"].tot = dragonlootlol["PETEPIC"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=ender%20dragon")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  if (auction[i].tier == "EPIC") {
+  lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["PETEPIC"].petepicprice = totcalc/auction.length
+   dragonlootlol["PETEPIC"].totprice = dragonlootlol["PETEPIC"].petepicprice * dragonlootlol["PETEPIC"].tot
+  }
+}
+
+})
+
+
+document.getElementById("totepicpet").innerHTML= totepicpet;
+}
+
+
+
+
+
+
+function aotd() {
+
+totaotd= 1+ totaotd;
+
+dragonlootlol["AOTD"].tot = dragonlootlol["AOTD"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=aotd")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["AOTD"].aotdprice = totcalc/auction.length/2
+   dragonlootlol["AOTD"].totprice = dragonlootlol["AOTD"].aotdprice * dragonlootlol["AOTD"].tot
+}
+
+})
+
+document.getElementById("totaotd").innerHTML= totaotd;
+}
+
+
+
+
+function suppiece() {
+
+totsuppiece+= 1;
+
+document.getElementById("totsuppiece").innerHTML= totsuppiece;
+}
+
+
+
+
+function strongpiece() {
+
+totstrongpiece+= 1;
+
+document.getElementById("totstrongpiece").innerHTML= totstrongpiece;
+}
+
+
+
+
+function unstablepiece() {
+
+totunstablepiece+= 1;
+
+document.getElementById("totunstablepiece").innerHTML= totunstablepiece;
+}
+
+
+
+
+function youngpiece() {
+
+totyoungpiece+= 1;
+
+document.getElementById("totyoungpiece").innerHTML= totyoungpiece;
+}
+
+
+
+
+function wizepiece() {
+
+totwizepiece+= 1;
+
+document.getElementById("totwizepiece").innerHTML= totwizepiece;
+}
+
+
+
+
+
+function oldpiece() {
+
+totoldpiece+= 1;
+
+document.getElementById("totoldpiece").innerHTML= totoldpiece;
+}
+
+
+
+function protectorpiece() {
+
+totprotectorpiece+= 1;
+
+document.getElementById("totprotectorpiece").innerHTML= totprotectorpiece;
+}
+
+
+function scroll() {
+
+totscroll+= 1;
+
+document.getElementById("totscroll").innerHTML= totscroll;
+}
+
+
+
+
+// Set var to 0 to avoid the problem with [SPAN Objet Class]
+totsup = 0
+document.getElementById("superiort").innerHTML=all;
+
+totstrong = 0
+document.getElementById("strongt").innerHTML=all;
+
+totunstable = 0
+document.getElementById("unstablet").innerHTML=all;
+
+totyoung = 0
+document.getElementById("youngt").innerHTML=all;
+
+totwize = 0
+document.getElementById("wizet").innerHTML=all;
+
+totold = 0
+document.getElementById("oldt").innerHTML=all;
+
+totprotector = 0
+document.getElementById("protectort").innerHTML=all;
+
+
+
+
+
+
+
+
+function sup() {
+
+  totsup+= 1;
+
+document.getElementById("superiort").innerHTML= totsup;
+}
+
+function strong() {
+
+totstrong+= 1;
+
+document.getElementById("strongt").innerHTML= totstrong;
+}
+
+function unstable() {
+
+totunstable+= 1;
+
+document.getElementById("unstablet").innerHTML= totunstable;
+}
+
+function young() {
+
+totyoung+= 1;
+
+document.getElementById("youngt").innerHTML= totyoung;
+}
+
+function wize() {
+
+totwize+= 1;
+
+document.getElementById("wizet").innerHTML= totwize;
+}
+
+function old() {
+
+totold+= 1;
+
+document.getElementById("oldt").innerHTML= totold;
+}
+
+function protector() {
+
+totprotector+= 1;
+
+document.getElementById("protectort").innerHTML= totprotector;
+}
+
+
+// Set var to 0 to avoid the problem with [SPAN Objet Class]
+helmetvar = 0
+document.getElementById("helmetstats").innerHTML=all;
+
+chestplatevar = 0
+document.getElementById("chestplatestats").innerHTML=all;
+
+bootsvar = 0
+document.getElementById("bootstats").innerHTML=all;
+
+leggingsvar = 0
+document.getElementById("leggingstats").innerHTML=all;
+
+
+
+function helmetf() {
+
+helmetvar+= 1;
+
+document.getElementById("helmetstats").innerHTML= helmetvar;
+}
+
+function chestplatef() {
+
+chestplatevar+= 1;
+
+document.getElementById("chestplatestats").innerHTML= chestplatevar;
+}
+
+function leggingsf() {
+
+leggingsvar+= 1;
+
+document.getElementById("leggingstats").innerHTML= leggingsvar;
+}
+
+function bootsf() {
+
+bootsvar+= 1;
+
+document.getElementById("bootstats").innerHTML= bootsvar;
+}
+
+function onmouseleft() {
+  var cacherstats = document.getElementById("stats_content");
+  cacherstats.style.display = "none";
+  var mouseover = "yes"
+}
+
+function mouseoverloot() {
+
+  var cacherstats = document.getElementById("stats_content");
+  cacherstats.style.display = "block";
+  var mouseover = "no"
+
+}
+
+function outhelmet() {
+  var cacherstats = document.getElementById("stats_content_helmet");
+  cacherstats.style.display = "none";
+  console.log("helmetnone")
+  var mouseover = "yes"
+}
+
+function onhelmet() {
+
+  var cacherstats = document.getElementById("stats_content_helmet");
+  cacherstats.style.display = "block";
+  console.log("helmetblock")
+  var mouseover = "no"
+
+}
+
+
+function gbstastscontent() {
+
+  var cacherstats = document.getElementById("stats_content");
+
+  if (cacherstats.style.display === "none") {
+
+cacherstats.style.display = "block";
+}
+
+if (cacherstats.style.display === "block" && mouseover === "no") {
+cacherstats.style.display = "none";
+
+}
+
+}
+
+
+function suprstats() {
+
+
+}
+
+
+
+
+
+
+
+
+
+
+var player2 = document.querySelector('#audioPlayer2');
+player2.play();
+
+
+
+
+
+
+              
+              
+function drag() {
+
+
+var player = document.querySelector('#audioPlayer');
+player.play();
+
+var eyelast = document.getElementById("chanceITN").value;
+document.getElementById("eyelast").innerHTML=eyelast;
+
+var mf = document.getElementById("DamagesITN").value;
+if ( !mf.replace(/\s+/, '').length ) {
+                 mf = 0
+                 }
+document.getElementById("mf").innerHTML=mf + "%";
+
+
+fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    var cost = bazaar.products.SUMMONING_EYE.quick_status.buyPrice
+    cost = parseFloat(cost)
+    document.getElementById("cost1").innerHTML=cost*eyelast;
+    console.log(cost)
+})
+
+
+
+
+
+
+var place = document.getElementsByClassName("custom-select").value
+document.getElementById("place").innerHTML= place;
+
+totsumm(), weigth(), totcostu(), placest(), looter()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</div>
