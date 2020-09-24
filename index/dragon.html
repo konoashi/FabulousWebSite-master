@@ -1288,81 +1288,6 @@ function looter() {
     
     var eyelast = document.getElementById("chanceITN").value;
 
-    if (alreadyloot == "no" && weigthnb > 324) {
-     //HELMET
-     var a = Math.random();
-
-  if (weigth == 325 ) {
-   var b = 0.16;
-   }
-
-  if (weigth == 350 ) {
-   var b = 0.17;
-   }
-   
-   if (weigth == 375 ) {
-   var b = 0.17;
-   }
-   
-   if (weigth == 400 ) {
-   var b = 0.18;
-   }
-   
-   if (weigth == 425 ) {
-   var b = 0.18;
-   }
-
-   if (weigth == 450 ) {
-   var b = 0.18;
-   }
-
-   if (weigth == 475 ) {
-   var b = 0.18;
-   }
-   
-   if (weigth == 500 ) {
-   var b = 0.20;
-   }
-   
-   if (weigth == 525 ) {
-   var b = 0.20;
-   }
-   
-   if (weigth == 550 ) {
-   var b = 0.20;
-   }
-   
-   if (weigth == 575 ) {
-   var b = 0.21;
-   }
-   
-   if (weigth == 600 ) {
-   var b = 0.22;
-   }
-   
-   if (weigth == 625 ) {
-   var b = 0.23;
-   }
-   
-   if (weigth == 650 ) {
-   var b = 0.24;
-   }
-   
-   if (weigth == 675 ) {
-   var b = 0.25;
-   }
-   
-   if (weigth == 700 ) {
-   var b = 0.28;
-   }
-   
-  if (a < b) {
-            var LOOT = 3;
-            var alreadyloot = "yes"
-            helmetf()
-		
-					}
-   }
 
     if (dragon == "SUPERIOR" && alreadyloot == "no" && weigthnb > 449) {
      //HORN
@@ -1485,7 +1410,81 @@ function looter() {
    }
 
    
+   if (alreadyloot == "no" && weigthnb > 324) {
+     //HELMET
+     var a = Math.random();
+
+  if (weigth == 325 ) {
+   var b = 0.16;
+   }
+
+  if (weigth == 350 ) {
+   var b = 0.17;
+   }
    
+   if (weigth == 375 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 400 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 425 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 450 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 475 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 500 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 525 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 550 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 575 ) {
+   var b = 0.21;
+   }
+   
+   if (weigth == 600 ) {
+   var b = 0.22;
+   }
+   
+   if (weigth == 625 ) {
+   var b = 0.23;
+   }
+   
+   if (weigth == 650 ) {
+   var b = 0.24;
+   }
+   
+   if (weigth == 675 ) {
+   var b = 0.25;
+   }
+   
+   if (weigth == 700 ) {
+   var b = 0.28;
+   }
+   
+  if (a < b) {
+            var LOOT = 3;
+            var alreadyloot = "yes"
+            helmetf()
+		
+					}
+   }
 
    if (alreadyloot == "no" && weigthnb > 399) {
      //CHESTPLATE
@@ -1906,19 +1905,15 @@ if (LOOT == 1) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20chestplate")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["PROTECTOR"].chestplateprice = totcalc/auction.length/2
+     dragonlootlol["PROTECTOR"].chestplateprice = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) *80
      dragonlootlol["PROTECTOR"].chestplatetotprice = dragonlootlol["PROTECTOR"].chestplateprice * dragonlootlol["PROTECTOR"].chestplate
   
-  }
+  
 })
 
 
@@ -1929,18 +1924,13 @@ if (LOOT == 2) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20leggings")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["PROTECTOR"].leggingsprice = totcalc/auction.length/2
+  dragonlootlol["PROTECTOR"].leggingsprice = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) *70
      dragonlootlol["PROTECTOR"].leggingstotprice = dragonlootlol["PROTECTOR"].leggingsprice * dragonlootlol["PROTECTOR"].leggings
-  }
   
 })
 }
@@ -1950,19 +1940,14 @@ if (LOOT == 3) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20helmet")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
   
   
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["PROTECTOR"].helmetprice = totcalc/auction.length/2
+  dragonlootlol["PROTECTOR"].helmetprice = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) *50
      dragonlootlol["PROTECTOR"].helmettotprice = dragonlootlol["PROTECTOR"].helmetprice * dragonlootlol["PROTECTOR"].helmet
-     
-  }
   
 })
 }
@@ -1972,19 +1957,14 @@ if (LOOT == 4) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20boots")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
   
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["PROTECTOR"].bootsprice = totcalc/auction.length/2
+  dragonlootlol["PROTECTOR"].bootsprice = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) *40
      dragonlootlol["PROTECTOR"].bootstotprice = dragonlootlol["PROTECTOR"].bootsprice * dragonlootlol["PROTECTOR"].boots
-  
-  }
 })
 }
 
