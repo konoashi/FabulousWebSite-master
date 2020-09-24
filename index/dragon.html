@@ -1981,19 +1981,13 @@ if (LOOT == 1) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20chestplate")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
-  
+.then((bazaar)=> {
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["SUPERIOR"].chestplateprice = totcalc/auction.length/2
+
+  dragonlootlol["SUPERIOR"].chestplateprice = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) *80
      dragonlootlol["SUPERIOR"].chestplatetotprice = dragonlootlol["SUPERIOR"].chestplateprice * dragonlootlol["SUPERIOR"].chestplate
-  }
-  }
 })
 
 
@@ -2004,19 +1998,13 @@ if (LOOT == 2) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20leggings")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
-
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["SUPERIOR"].leggingsprice = totcalc/auction.length/2
+  dragonlootlol["SUPERIOR"].leggingsprice = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) *70
      dragonlootlol["SUPERIOR"].leggingstotprice = dragonlootlol["SUPERIOR"].leggingsprice * dragonlootlol["SUPERIOR"].leggings
-  }
-  }
+
 })
 }
 
@@ -2025,19 +2013,13 @@ if (LOOT == 3) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20helmet")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
-
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["SUPERIOR"].helmetprice = totcalc/auction.length/2
+  dragonlootlol["SUPERIOR"].helmetprice = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) *50
      dragonlootlol["SUPERIOR"].helmettotprice = dragonlootlol["SUPERIOR"].helmetprice * dragonlootlol["SUPERIOR"].helmet
-  }
-  }
+
 })
 }
 
@@ -2046,19 +2028,13 @@ if (LOOT == 4) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20boots")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
-
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["SUPERIOR"].bootsprice = totcalc/auction.length/2
+  dragonlootlol["SUPERIOR"].bootsprice = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) *40
      dragonlootlol["SUPERIOR"].bootstotprice = dragonlootlol["SUPERIOR"].bootsprice * dragonlootlol["SUPERIOR"].boots
-  }
-  }
+
 })
 }
 
@@ -2074,19 +2050,12 @@ if (LOOT == 1) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20chestplate")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["STRONG"].chestplateprice = totcalc/auction.length/2
-     dragonlootlol["STRONG"].chestplatetotprice = dragonlootlol["STRONG"].chestplateprice * dragonlootlol["STRONG"].chestplate
-  }
-  }
+ 
 })
 
 
@@ -2097,19 +2066,11 @@ if (LOOT == 2) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20leggings")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["STRONG"].leggingsprice = totcalc/auction.length/2
-     dragonlootlol["STRONG"].leggingstotprice = dragonlootlol["STRONG"].leggingsprice * dragonlootlol["STRONG"].leggings
-  }
-  }
 })
 }
 
@@ -2118,19 +2079,12 @@ if (LOOT == 3) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20helmet")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["STRONG"].helmetprice = totcalc/auction.length/2
-     dragonlootlol["STRONG"].helmettotprice = dragonlootlol["STRONG"].helmetprice * dragonlootlol["STRONG"].helmet
-  }
-  }
+ 
 })
 }
 
@@ -2139,19 +2093,12 @@ if (LOOT == 4) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20boots")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["STRONG"].bootsprice = totcalc/auction.length/2
-     dragonlootlol["STRONG"].bootstotprice = dragonlootlol["STRONG"].bootsprice * dragonlootlol["STRONG"].boots
-  }
-  }
+  
 })
 }
 
@@ -2167,19 +2114,13 @@ if (LOOT == 1) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20chestplate")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
   
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["UNSTABLE"].chestplateprice = totcalc/auction.length/2
-     dragonlootlol["UNSTABLE"].chestplatetotprice = dragonlootlol["UNSTABLE"].chestplateprice * dragonlootlol["UNSTABLE"].chestplate
-  }
-  
+ 
 })
 
 
@@ -2190,19 +2131,13 @@ if (LOOT == 2) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20leggings")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
   
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["UNSTABLE"].leggingsprice = totcalc/auction.length/2
-     dragonlootlol["UNSTABLE"].leggingstotprice = dragonlootlol["UNSTABLE"].leggingsprice * dragonlootlol["UNSTABLE"].leggings
-  }
-  
+ 
 })
 }
 
@@ -2211,19 +2146,13 @@ if (LOOT == 3) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20helmet")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
   
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["UNSTABLE"].helmetprice = totcalc/auction.length/2
-     dragonlootlol["UNSTABLE"].helmettotprice = dragonlootlol["UNSTABLE"].helmetprice * dragonlootlol["UNSTABLE"].helmet
-  }
-})
+}) 
 }
 
 if (LOOT == 4) {
@@ -2231,18 +2160,12 @@ if (LOOT == 4) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20boots")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
   
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["UNSTABLE"].bootsprice = totcalc/auction.length/2
-     dragonlootlol["UNSTABLE"].bootstotprice = dragonlootlol["UNSTABLE"].bootsprice * dragonlootlol["UNSTABLE"].boots
-  }
   
 })
 }
@@ -2259,19 +2182,12 @@ if (LOOT == 1) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20chestplate")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["YOUNG"].chestplateprice = totcalc/auction.length
-     dragonlootlol["YOUNG"].chestplatetotprice = dragonlootlol["YOUNG"].chestplateprice * dragonlootlol["YOUNG"].chestplate
-  }
-  }
+  
 })
 
 
@@ -2282,19 +2198,12 @@ if (LOOT == 2) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20leggings")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["YOUNG"].leggingsprice = totcalc/auction.length
-     dragonlootlol["YOUNG"].leggingstotprice = dragonlootlol["YOUNG"].leggingsprice * dragonlootlol["YOUNG"].leggings
-  }
-  }
+  
 })
 }
 
@@ -2303,19 +2212,12 @@ if (LOOT == 3) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20helmet")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["YOUNG"].helmetprice = totcalc/auction.length
-     dragonlootlol["YOUNG"].helmettotprice = dragonlootlol["YOUNG"].helmetprice * dragonlootlol["YOUNG"].helmet
-  }
-  }
+  
 })
 }
 
@@ -2324,19 +2226,12 @@ if (LOOT == 4) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20boots")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["YOUNG"].bootsprice = totcalc/auction.length
-     dragonlootlol["YOUNG"].bootstotprice = dragonlootlol["YOUNG"].bootsprice * dragonlootlol["YOUNG"].boots
-  }
-  }
+  
 })
 }
 
@@ -2352,19 +2247,12 @@ if (LOOT == 1) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20chestplate")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["WIZE"].chestplateprice = totcalc/auction.length/2
-     dragonlootlol["WIZE"].chestplatetotprice = dragonlootlol["WIZE"].chestplateprice * dragonlootlol["WIZE"].chestplate
-  }
-  }
+
 })
 
 
@@ -2375,19 +2263,12 @@ if (LOOT == 2) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20leggings")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["WIZE"].leggingsprice = totcalc/auction.length/2
-     dragonlootlol["WIZE"].leggingstotprice = dragonlootlol["WIZE"].leggingsprice * dragonlootlol["WIZE"].leggings
-  }
-  }
+  
 })
 }
 
@@ -2396,19 +2277,12 @@ if (LOOT == 3) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20helmet")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["WIZE"].helmetprice = totcalc/auction.length/2
-     dragonlootlol["WIZE"].helmettotprice = dragonlootlol["WIZE"].helmetprice * dragonlootlol["WIZE"].helmet
-  }
-  }
+ 
 })
 }
 
@@ -2417,19 +2291,12 @@ if (LOOT == 4) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20boots")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["WIZE"].bootsprice = totcalc/auction.length/2
-     dragonlootlol["WIZE"].bootstotprice = dragonlootlol["WIZE"].bootsprice * dragonlootlol["WIZE"].boots
-  }
-  }
+ 
 })
 }
 
@@ -2450,19 +2317,12 @@ if (LOOT == 1) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20chestplate")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["OLD"].chestplateprice = totcalc/auction.length/2
-     dragonlootlol["OLD"].chestplatetotprice = dragonlootlol["OLD"].chestplateprice * dragonlootlol["OLD"].chestplate
-  }
-  }
+ 
 })
 
 
@@ -2473,19 +2333,11 @@ if (LOOT == 2) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20leggings")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["OLD"].leggingsprice = totcalc/auction.length/2
-     dragonlootlol["OLD"].leggingstotprice = dragonlootlol["OLD"].leggingsprice * dragonlootlol["OLD"].leggings
-  }
-  }
 })
 }
 
@@ -2494,19 +2346,12 @@ if (LOOT == 3) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20helmet")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["OLD"].helmetprice = totcalc/auction.length/2
-     dragonlootlol["OLD"].helmettotprice = dragonlootlol["OLD"].helmetprice * dragonlootlol["OLD"].helmet
-  }
-  }
+
 })
 }
 
@@ -2515,19 +2360,12 @@ if (LOOT == 4) {
 
   totcalc = 0
 
-fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20boots")
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
-.then((auction)=> {
+.then((bazaar)=> {
   
 
-  if (auction[i].anvils == "No Anvil Uses" || "") {
-  for (let i = 0; i < auction.length; i++) {
-    lastcalc = parseFloat(auction[i].highest)
-    totcalc = lastcalc + totcalc
-     dragonlootlol["OLD"].bootsprice = totcalc/auction.length/2
-     dragonlootlol["OLD"].bootstotprice = dragonlootlol["OLD"].bootsprice * dragonlootlol["OLD"].boots
-  }
-  }
+
 })
 }
 
